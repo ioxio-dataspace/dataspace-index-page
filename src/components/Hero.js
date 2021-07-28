@@ -2,7 +2,7 @@
 
 import { Node } from 'react'
 import styled from 'styled-components'
-import iconDLI from '../img/dli-logo.svg'
+import { ReactComponent as IconDLI } from '../img/dli-logo.svg'
 import { COMPONENT_NAME } from '../conf'
 import { onMobile } from '../mixins'
 
@@ -27,11 +27,12 @@ const Wrapper = styled.div`
   }
 `
 
-const Logo = styled.img`
+const Logo = styled(IconDLI)`
   position: absolute;
   top: 0;
   left: 0;
   width: 10rem;
+  height: 10rem;
 `
 
 const ComponentDescription = styled.div`
@@ -40,7 +41,7 @@ const ComponentDescription = styled.div`
 export function Hero () {
   return (
     <Wrapper>
-      <Logo src={iconDLI} alt='logo' />
+      <Logo alt="logo"/>
       <h1>{COMPONENT_NAME}</h1>
       <ComponentDescription>
         {COMPONENT_NAME} is a part of _NEXUS_ stack, and can not be accessed

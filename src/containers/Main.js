@@ -4,10 +4,9 @@ import { Footer } from '../components/Footer'
 import { Hero } from '../components/Hero'
 import { COMPONENT_NAME, NEXUS_URL, DEV_PORTAL_URL } from '../conf'
 
-import iconBusiness from '../img/business.svg'
-// import iconNexus from '../img/circles.svg'
-import iconNexus from '../img/nexus.svg'
-import iconDevPortal from '../img/computer.svg'
+import { ReactComponent as IconBusiness } from '../img/business.svg'
+import { ReactComponent as IconNexus } from '../img/nexus.svg'
+import { ReactComponent as IconDevPortal } from '../img/computer.svg'
 import theme from '../theme'
 import { flexRowCenter, onMobile } from '../mixins'
 
@@ -52,7 +51,7 @@ export function MainScreen () {
         <Hero/>
         <Sections>
           <LinkSection
-            title="Digital Living International" icon={iconBusiness}
+            title="Digital Living International" icon={<IconBusiness/>}
             href="https://digitalliving.fi"
           >
             A leading expert on data productization, data sharing and
@@ -63,7 +62,7 @@ export function MainScreen () {
             for
             companies and individuals by moving data fast and safely
           </LinkSection>
-          <LinkSection title="Nexus Technology" icon={iconNexus} href={NEXUS_URL}>
+          <LinkSection title="Nexus Technology" icon={<IconNexus/>} href={NEXUS_URL}>
             Data sharing nexuses are at the core of making existing data
             more
             flexible, usable, safer and inevitably more profitable. Read
@@ -72,7 +71,7 @@ export function MainScreen () {
             Nexus and ways it could help your business
           </LinkSection>
           <LinkSection
-            title="Developer portal" icon={iconDevPortal}
+            title="Developer portal" icon={<IconDevPortal/>}
             href={DEV_PORTAL_URL}
           >
             Are you already a member on your way to manage and discover data
