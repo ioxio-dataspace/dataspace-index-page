@@ -1,13 +1,13 @@
-import React from 'react'
-import { hydrate, render } from 'react-dom'
+import React from "react"
+import { hydrate, render } from "react-dom"
 
-import { MainScreen } from './containers/Main'
+import { MainScreen } from "./containers/Main"
 
-import './global.css'
+import "./global.css"
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById("root")
 if (rootElement.hasChildNodes()) {
-  hydrate(<MainScreen/>, rootElement)
+  hydrate(<MainScreen />, rootElement)
 } else {
-  render(<MainScreen/>, rootElement)
+  render(<MainScreen />, rootElement)
 }

@@ -1,8 +1,8 @@
 // @flow
 
-import styled from 'styled-components'
-import { ReactComponent as IconDLI } from '../img/dli-logo.svg'
-import { COMPONENT_NAME, NEXUS_NAME } from '../conf'
+import styled from "styled-components"
+import { ReactComponent as IconDLI } from "../img/dli-logo.svg"
+import { COMPONENT_NAME, NEXUS_NAME } from "../conf"
 
 const Wrapper = styled.div`
   text-align: center;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   overflow: hidden;
 
   ::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: rgba(186, 186, 186, 0.6);
     z-index: -100;
@@ -34,13 +34,12 @@ const Logo = styled(IconDLI)`
   transform: translateY(-15%);
 `
 
-const ComponentDescription = styled.div`
-`
+const ComponentDescription = styled.div``
 
-export function Hero () {
+export function Hero() {
   return (
     <Wrapper>
-      <Logo alt="logo"/>
+      <Logo alt="logo" />
       <h1>{COMPONENT_NAME}</h1>
       <ComponentDescription>
         {COMPONENT_NAME} is a part of {NEXUS_NAME} stack, and can not be accessed

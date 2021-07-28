@@ -2,7 +2,7 @@
 
 const theme = {
   device: {
-    mobile: 1200
+    mobile: 1200,
   },
   mixins: {
     flexRowCenter: `
@@ -16,11 +16,11 @@ const theme = {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    `
+    `,
   },
   media: {
-    onMobile: '@media (max-width: 1200px)'
-  }
+    onMobile: "@media (max-width: 1200px)",
+  },
 }
 
 export default theme

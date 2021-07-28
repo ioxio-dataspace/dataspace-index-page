@@ -1,7 +1,7 @@
 // @flow
 
-import { Node } from 'react'
-import styled from 'styled-components'
+import { Node } from "react"
+import styled from "styled-components"
 
 const Link = styled.a`
   position: relative;
@@ -12,10 +12,10 @@ const Link = styled.a`
   color: black;
   text-decoration: none;
   overflow: hidden;
-  transition: background-color .3s,border .3s,color .3s;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
 
   ::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -26,9 +26,13 @@ const Link = styled.a`
   }
 `
 
-export function ButtonLink (props: { href: string, children: Node, className?: string }) {
+export function ButtonLink(props: {
+  href: string,
+  children: Node,
+  className?: string,
+}) {
   return (
-    <Link role={'button'} href={props.href}  className={props.className}>
+    <Link role={"button"} href={props.href} className={props.className}>
       {props.children}
     </Link>
   )
