@@ -34,7 +34,7 @@ jobs:
       - name: Prepare dist dir
         run: mkdir dist && cp build/index.html dist/index.html
 
-      - name: Deploy to GitHub Pages
+      - name: Push result into a dist branch
         if: success()
         run: |
           SRC="$(pwd)"
@@ -47,6 +47,6 @@ jobs:
           git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${BRANCH}"
         env:
           DEPLOY_DIR: dist
-          MESSAGE: Deploy to GitHub Pages
+          MESSAGE: Compile HTML file
           BRANCH: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
