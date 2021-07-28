@@ -1,0 +1,52 @@
+name: Generate HTML file
+
+on:
+  push:
+    branches:
+      - initial-version
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+#      - name: Set up Python
+#        uses: actions/setup-python@v1
+#        with:
+#          python-version: 3.8
+#
+#      - name: Install pre-commit
+#        run: pip install pre-commit
+#
+#      - name: Run pre-commit
+#        run: pre-commit run --all-files || exit 1
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install JS dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm build
+
+      - name: Prepare dist dir
+        run: mkdir dist && cp build/index.html dist/index.html
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        run: |
+          SRC="$(pwd)"
+          mkdir /tmp/github-dist && cd /tmp/github-dist
+          git init . && git checkout --orphan "${BRANCH}"
+          cp -r "${SRC}/${DEPLOY_DIR}"/* .
+
+          git config user.name "GitHub" && git config user.email "<noreply@github.com>"
+          git add . && git status && git commit --message "${MESSAGE}"
+          git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${BRANCH}"
+        env:
+          DEPLOY_DIR: dist
+          MESSAGE: Deploy to GitHub Pages
+          BRANCH: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
