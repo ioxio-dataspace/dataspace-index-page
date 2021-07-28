@@ -1,14 +1,16 @@
 import styled from 'styled-components'
+
 import { LinkSection as LinkSectionBase } from '../components/LinkSection'
 import { Footer } from '../components/Footer'
 import { Hero } from '../components/Hero'
-import { COMPONENT_NAME, NEXUS_URL, DEV_PORTAL_URL } from '../conf'
+import { SEO } from '../seo'
 
 import { ReactComponent as IconBusiness } from '../img/business.svg'
 import { ReactComponent as IconNexus } from '../img/nexus.svg'
 import { ReactComponent as IconDevPortal } from '../img/computer.svg'
+
 import theme from '../theme'
-import { flexRowCenter, onMobile } from '../mixins'
+import { NEXUS_URL, DEV_PORTAL_URL } from '../conf'
 
 const Layout = styled.div`
   display: flex;
@@ -26,27 +28,28 @@ const Content = styled.div`
 `
 
 const Sections = styled.div`
-  ${flexRowCenter()}
+  ${theme.mixins.flexRowCenter}
   flex-wrap: wrap;
   margin-top: 1rem;
 
-  ${onMobile(`
+   ${theme.media.onMobile}{
     flex-direction: column;
-  `)}
+  }
 `
 
 const LinkSection = styled(LinkSectionBase)`
   margin: 0.5rem;
   width: 25rem;
 
-  ${onMobile(`
+  ${theme.media.onMobile}{
     margin-bottom: 2rem;
-  `)}
+  }
 `
 
 export function MainScreen () {
   return (
     <Layout>
+      <SEO/>
       <Content>
         <Hero/>
         <Sections>

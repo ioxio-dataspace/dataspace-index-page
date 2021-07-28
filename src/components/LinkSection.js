@@ -17,12 +17,6 @@ const Wrapper = styled.div`
   }
 `
 
-const Title = styled.h1`
-`
-
-const Description = styled.div`
-`
-
 const ButtonLink = styled(ButtonLinkBase)`
   margin-top: 1rem;
 `
@@ -32,8 +26,8 @@ export function LinkSection (props: { title: string, href: string, icon: any, cl
 
   return <Wrapper className={props.className}>
     {icon}
-    <Title>{title}</Title>
-    <Description>{children}</Description>
+    <h1>{title}</h1>
+    <div>{children}</div>
     <ButtonLink href={href}>READ MORE</ButtonLink>
   </Wrapper>
 }

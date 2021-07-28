@@ -1,11 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { hydrate, render } from 'react-dom'
+
 import { MainScreen } from './containers/Main'
+
 import './global.css'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <MainScreen />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+const rootElement = document.getElementById('root')
+if (rootElement.hasChildNodes()) {
+  hydrate(<MainScreen/>, rootElement)
+} else {
+  render(<MainScreen/>, rootElement)
+}

@@ -1,10 +1,8 @@
 // @flow
 
-import { Node } from 'react'
 import styled from 'styled-components'
 import { ReactComponent as IconDLI } from '../img/dli-logo.svg'
-import { COMPONENT_NAME } from '../conf'
-import { onMobile } from '../mixins'
+import { COMPONENT_NAME, NEXUS_NAME } from '../conf'
 
 const Wrapper = styled.div`
   text-align: center;
@@ -33,6 +31,7 @@ const Logo = styled(IconDLI)`
   left: 0;
   width: 10rem;
   height: 10rem;
+  transform: translateY(-15%);
 `
 
 const ComponentDescription = styled.div`
@@ -44,7 +43,7 @@ export function Hero () {
       <Logo alt="logo"/>
       <h1>{COMPONENT_NAME}</h1>
       <ComponentDescription>
-        {COMPONENT_NAME} is a part of _NEXUS_ stack, and can not be accessed
+        {COMPONENT_NAME} is a part of {NEXUS_NAME} stack, and can not be accessed
         directly.
       </ComponentDescription>
     </Wrapper>
