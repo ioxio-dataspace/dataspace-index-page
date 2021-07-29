@@ -1,9 +1,6 @@
 // @flow
 
 const theme = {
-  device: {
-    mobile: 1200,
-  },
   mixins: {
     flexRowCenter: `
       display: flex;
