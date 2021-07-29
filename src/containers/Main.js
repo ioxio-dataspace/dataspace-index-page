@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { LinkSection as LinkSectionBase } from "../components/LinkSection"
 import { Footer } from "../components/Footer"
 import { Hero } from "../components/Hero"
-import { SEO } from "../seo"
 
 import { ReactComponent as IconBusiness } from "../img/business.svg"
 import { ReactComponent as IconNexus } from "../img/nexus.svg"
@@ -23,7 +22,6 @@ const Content = styled.div`
   flex-direction: column;
   flex: 1;
   padding: 0.5rem;
-  //max-width: 150rem;
   margin: 0 auto;
 `
 
@@ -49,7 +47,6 @@ const LinkSection = styled(LinkSectionBase)`
 export function MainScreen() {
   return (
     <Layout>
-      <SEO />
       <Content>
         <Hero />
         <Sections>

@@ -11,7 +11,6 @@ specifiers:
   prop-types: ^15.7.2
   react: ^17.0.2
   react-dom: ^17.0.2
-  react-helmet: ^6.1.0
   react-scripts: 4.0.3
   standard: ^16.0.3
   styled-components: ^5.3.0
@@ -25,7 +24,6 @@ dependencies:
   prop-types: 15.7.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
-  react-helmet: 6.1.0_react@17.0.2
   react-scripts: 4.0.3_react@17.0.2
   standard: 16.0.3
   styled-components: 5.3.0_react-dom@17.0.2+react@17.0.2
@@ -13646,28 +13644,6 @@ packages:
       }
     dev: false
 
-  /react-fast-compare/3.2.0:
-    resolution:
-      {
-        integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==,
-      }
-    dev: false
-
-  /react-helmet/6.1.0_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-4uMzEY9nlDlgxr61NL3XbKRy1hEkXmKNXhjbAIOVw5vcFrsdYbH2FEwcNyWvWinl103nXgzYNlns9ca+8kFiWw==,
-      }
-    peerDependencies:
-      react: ">=16.3.0"
-    dependencies:
-      object-assign: 4.1.1
-      prop-types: 15.7.2
-      react: 17.0.2
-      react-fast-compare: 3.2.0
-      react-side-effect: 2.1.1_react@17.0.2
-    dev: false
-
   /react-is/16.13.1:
     resolution:
       {
@@ -13781,17 +13757,6 @@ packages:
       - webpack-command
       - webpack-hot-middleware
       - webpack-plugin-serve
-    dev: false
-
-  /react-side-effect/2.1.1_react@17.0.2:
-    resolution:
-      {
-        integrity: sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==,
-      }
-    peerDependencies:
-      react: ^16.3.0 || ^17.0.0
-    dependencies:
-      react: 17.0.2
     dev: false
 
   /react/17.0.2:

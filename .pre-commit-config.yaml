@@ -10,3 +10,10 @@ repos:
     rev: v2.3.0
     hooks:
       - id: prettier
+  - repo: local
+    hooks:
+      - id: validate-tags
+        name: Validate parse-template placeholders
+        entry: python validate_tags.py
+        language: system
+        pass_filenames: false
