@@ -3,7 +3,7 @@ name: Generate HTML file
 on:
   push:
     branches:
-      - initial-version
+      - main
 
 jobs:
   Deploy:
