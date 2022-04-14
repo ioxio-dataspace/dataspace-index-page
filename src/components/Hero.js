@@ -1,7 +1,7 @@
 // @flow
 
 import styled from "styled-components"
-import { ReactComponent as IconDLI } from "../img/dli-logo.svg"
+import { ReactComponent as IOXIOIcon } from "../img/ioxioLogo.svg"
 import { COMPONENT_NAME, NEXUS_NAME } from "../conf"
 import theme from "../theme"
 
@@ -30,13 +30,13 @@ const Wrapper = styled.div`
   }
 `
 
-const Logo = styled(IconDLI)`
+const Logo = styled(IOXIOIcon)`
   position: absolute;
   top: 0;
   left: 0;
   width: 10rem;
   height: 10rem;
-  transform: translateY(-15%);
+  transform: translateY(10%) translateX(10%);
 `
 
 const ComponentDescription = styled.div``

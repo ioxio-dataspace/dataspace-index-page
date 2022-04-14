@@ -51,19 +51,19 @@ export function MainScreen() {
       <Content>
         <Hero />
         <Sections>
-          <LinkSection
-            title="Digital Living International"
-            icon={<IconBusiness />}
-            href="https://digitalliving.fi"
-          >
+          <LinkSection title="IOXIO" icon={<IconBusiness />} href="https://ioxio.com">
             A leading expert on data productization, data sharing and connected data
             economy technologies. Read more about our vision to make life easier for
             companies and individuals by moving data fast and safely
           </LinkSection>
-          <LinkSection title="Nexus Technology" icon={<IconNexus />} href={NEXUS_URL}>
-            Data sharing nexuses are at the core of making existing data more flexible,
-            usable, safer and inevitably more profitable. Read more about Nexus and ways
-            it could help your business
+          <LinkSection
+            title="Dataspace technology"
+            icon={<IconNexus />}
+            href={NEXUS_URL}
+          >
+            Data sharing Dataspaces are at the core of making existing data more
+            flexible, usable, safer and inevitably more profitable. Read more about
+            Dataspace and ways it could help your business
           </LinkSection>
           <LinkSection
             title="Developer portal"

@@ -13,7 +13,7 @@ const FooterWrapper = styled.footer`
 export function Footer(): Node {
   return (
     <FooterWrapper>
-      <div>Copyright © Digital Living International Oy</div>
+      <div>Copyright © IOXIO</div>
     </FooterWrapper>
   )
 }
