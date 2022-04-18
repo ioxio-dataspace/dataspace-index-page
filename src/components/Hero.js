@@ -34,8 +34,8 @@ const Logo = styled(IOXIOIcon)`
   position: absolute;
   top: 0;
   left: 0;
-  width: 10rem;
-  height: 10rem;
+  width: 20rem;
+  height: 20rem;
   transform: translateY(10%) translateX(10%);
 `
 

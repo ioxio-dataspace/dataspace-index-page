@@ -61,7 +61,7 @@ export function MainScreen() {
             icon={<IconNexus />}
             href={NEXUS_URL}
           >
-            Data sharing Dataspaces are at the core of making existing data more
+            Data sharing dataspaces are at the core of making existing data more
             flexible, usable, safer and inevitably more profitable. Read more about
             Dataspace and ways it could help your business
           </LinkSection>
