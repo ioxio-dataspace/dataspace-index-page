@@ -5,11 +5,11 @@ import { Footer } from "../components/Footer"
 import { Hero } from "../components/Hero"
 
 import { ReactComponent as IconBusiness } from "../img/business.svg"
-import { ReactComponent as IconNexus } from "../img/nexus.svg"
+import { ReactComponent as IconDataspace } from "../img/dataspace.svg"
 import { ReactComponent as IconDevPortal } from "../img/computer.svg"
 
 import theme from "../theme"
-import { NEXUS_URL, DEV_PORTAL_URL } from "../conf"
+import { DATASPACE_URL, DEV_PORTAL_URL } from "../conf"
 
 const Layout = styled.div`
   display: flex;
@@ -58,8 +58,8 @@ export function MainScreen() {
           </LinkSection>
           <LinkSection
             title="Dataspace technology"
-            icon={<IconNexus />}
-            href={NEXUS_URL}
+            icon={<IconDataspace />}
+            href={DATASPACE_URL}
           >
             Data sharing dataspaces are at the core of making existing data more
             flexible, usable, safer and inevitably more profitable. Read more about

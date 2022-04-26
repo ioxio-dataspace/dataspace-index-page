@@ -2,7 +2,7 @@
 
 import styled from "styled-components"
 import { ReactComponent as IOXIOIcon } from "../img/ioxioLogo.svg"
-import { COMPONENT_NAME, NEXUS_NAME } from "../conf"
+import { COMPONENT_NAME, DATASPACE_NAME } from "../conf"
 import theme from "../theme"
 
 const Wrapper = styled.div`
@@ -47,7 +47,7 @@ export function Hero() {
       <Logo alt="logo" />
       <h1>{COMPONENT_NAME}</h1>
       <ComponentDescription>
-        {COMPONENT_NAME} is a part of {NEXUS_NAME} stack, and can not be accessed
+        {COMPONENT_NAME} is a part of {DATASPACE_NAME} stack, and can not be accessed
         directly.
       </ComponentDescription>
     </Wrapper>

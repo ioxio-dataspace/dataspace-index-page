@@ -1,4 +1,4 @@
-# Nexus Index Page template
+# Dataspace Index Page template
 
 Please note that resulted HTML page contains some placeholders from
 [conf.js](src/conf.js) file. The idea is to replace them using
@@ -14,5 +14,5 @@ pnpm run start
 ```
 
 Deployment is made automatically into
-[dist](https://github.com/digitalliving/nexus-index-page/tree/dist) branch by pushing to
-`main`.
+[dist](https://github.com/ioxio-dataspace/dataspace-index-page/tree/dist) branch by
+pushing to `main`.
