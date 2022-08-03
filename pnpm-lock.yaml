@@ -3109,8 +3109,7 @@ packages:
       {
         integrity: sha512-1dVNHT76Uu5N3eJNTYcvxee+jzX4Z9lfciqRRHCU27ihbUcYi+iSc2iml5Ke1LXe1SyJCLA0+14Jh4tXJgOppA==,
       }
-    deprecated:
-      This version has been deprecated and is no longer supported or maintained
+    deprecated: This version has been deprecated and is no longer supported or maintained
     dev: false
 
   /@hapi/hoek/8.5.1:
@@ -3118,8 +3117,7 @@ packages:
       {
         integrity: sha512-yN7kbciD87WzLGc5539Tn0sApjyiGHAJgKvG9W8C7O+6c7qmoQMfVs0W4bX17eqz6C78QJqqFrtgdK5EWf6Qow==,
       }
-    deprecated:
-      This version has been deprecated and is no longer supported or maintained
+    deprecated: This version has been deprecated and is no longer supported or maintained
     dev: false
 
   /@hapi/joi/15.1.1:
@@ -3140,8 +3138,7 @@ packages:
       {
         integrity: sha512-tAag0jEcjwH+P2quUfipd7liWCNX2F8NvYjQp2wtInsZxnMlypdw0FtAOLxtvvkO+GSRRbmNi8m/5y42PQJYCQ==,
       }
-    deprecated:
-      This version has been deprecated and is no longer supported or maintained
+    deprecated: This version has been deprecated and is no longer supported or maintained
     dependencies:
       "@hapi/hoek": 8.5.1
     dev: false
@@ -5836,8 +5833,7 @@ packages:
       {
         integrity: sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==,
       }
-    deprecated:
-      Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less
+    deprecated: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less
       dependencies.
     dependencies:
       anymatch: 2.0.0
@@ -14253,8 +14249,7 @@ packages:
       {
         integrity: sha512-Lek/TYp1+7g7I+uMfJnnSJ7YWoD58ajo6Oarhlex7lvUce+RCKRuGRSgztDO3/MF/PuGKmUL5iTHKf208UNszw==,
       }
-    deprecated:
-      This package has been deprecated and is no longer maintained. Please use
+    deprecated: This package has been deprecated and is no longer maintained. Please use
       @rollup/plugin-babel.
     peerDependencies:
       "@babel/core": 7 || ^7.0.0-rc.2
