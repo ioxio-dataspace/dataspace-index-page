@@ -3,7 +3,7 @@ name: Generate HTML file
 on:
   push:
     branches:
-      - main
+      - fix-deploy-2
 
 jobs:
   Deploy:
@@ -16,17 +16,14 @@ jobs:
         with:
           python-version: 3.12
 
-      - name: Install pre-commit
-        run: pip install pre-commit
-
       - name: Install pnpm
         run: npm install -g pnpm
 
       - name: Install JS dependencies
         run: pnpm install
 
-      - name: Run pre-commit
-        run: pre-commit run --all-files || exit 1
+      # Run pre-commit --all-files
+      - uses: pre-commit/action@646c83fcd040023954eafda54b4db0192ce70507 # v3.0.0
 
       - name: Build project
         run: pnpm build
@@ -34,19 +31,19 @@ jobs:
       - name: Prepare dist dir
         run: mkdir dist && cp build/index.html dist/index.html
 
-      - name: Push result into a dist branch
-        if: success()
-        run: |
-          SRC="$(pwd)"
-          mkdir /tmp/github-dist && cd /tmp/github-dist
-          git init . && git checkout --orphan "${BRANCH}"
-          cp -r "${SRC}/${DEPLOY_DIR}"/* .
+      # - name: Push result into a dist branch
+      #   if: success()
+      #   run: |
+      #     SRC="$(pwd)"
+      #     mkdir /tmp/github-dist && cd /tmp/github-dist
+      #     git init . && git checkout --orphan "${BRANCH}"
+      #     cp -r "${SRC}/${DEPLOY_DIR}"/* .
 
-          git config user.name "GitHub" && git config user.email "<noreply@github.com>"
-          git add . && git status && git commit --message "${MESSAGE}"
-          git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${BRANCH}"
-        env:
-          DEPLOY_DIR: dist
-          MESSAGE: Compile HTML file
-          BRANCH: dist
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     git config user.name "GitHub" && git config user.email "<noreply@github.com>"
+      #     git add . && git status && git commit --message "${MESSAGE}"
+      #     git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "${BRANCH}"
+      #   env:
+      #     DEPLOY_DIR: dist
+      #     MESSAGE: Compile HTML file
+      #     BRANCH: dist
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
